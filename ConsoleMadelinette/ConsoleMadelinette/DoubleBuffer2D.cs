@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Madelinette
+namespace ConsoleMadelinette
 {
     class DoubleBuffer2D<T>
     {
