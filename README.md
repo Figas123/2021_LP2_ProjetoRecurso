@@ -9,6 +9,7 @@ Nuno Figueiredo, (a21705451)
 
 
 ### Repositório Git
+[Repositório](https://github.com/Figas123/2021_LP2_ProjetoRecurso)
 
 ## Arquitetura da solução:
 
@@ -19,5 +20,5 @@ Nuno Figueiredo, (a21705451)
 
 
 ## Referências
-- [1] Conteudo da referencia.  https://linkdareferencia
+
 
