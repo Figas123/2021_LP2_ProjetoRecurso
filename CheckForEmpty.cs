@@ -8,10 +8,8 @@ namespace Madelinette.Common
 {
     public class CheckForEmpty : Game
     {
-        public void CheckForEmptySpot()
+        public bool CheckForEmptySpot(ConsoleKeyInfo input)
         {
-            ConsoleKeyInfo input = Console.ReadKey(true);
-
             switch (input.Key)
             {
                 case ConsoleKey.D1:
@@ -20,18 +18,18 @@ namespace Madelinette.Common
                         {
                             BoardSpots[0] = 0;
                             BoardSpots[2] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[3] == 0)
                         {
                             BoardSpots[0] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D2:
@@ -40,18 +38,18 @@ namespace Madelinette.Common
                         {
                             BoardSpots[1] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[4] == 0)
                         {
                             BoardSpots[1] = 0;
                             BoardSpots[4] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D3:
@@ -60,24 +58,24 @@ namespace Madelinette.Common
                         {
                             BoardSpots[2] = 0;
                             BoardSpots[0] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[3] == 0)
                         {
                             BoardSpots[2] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[5] == 0)
                         {
                             BoardSpots[2] = 0;
                             BoardSpots[5] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D4:
@@ -86,42 +84,42 @@ namespace Madelinette.Common
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[0] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[1] == 0)
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[1] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[2] == 0)
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[2] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[4] == 0)
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[4] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[5] == 0)
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[5] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[6] == 0)
                         {
                             BoardSpots[3] = 0;
                             BoardSpots[6] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D5:
@@ -130,24 +128,24 @@ namespace Madelinette.Common
                         {
                             BoardSpots[4] = 0;
                             BoardSpots[1] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[3] == 0)
                         {
                             BoardSpots[4] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[6] == 0)
                         {
                             BoardSpots[4] = 0;
                             BoardSpots[6] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D6:
@@ -156,24 +154,24 @@ namespace Madelinette.Common
                         {
                             BoardSpots[5] = 0;
                             BoardSpots[2] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[3] == 0)
                         {
                             BoardSpots[5] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[6] == 0)
                         {
                             BoardSpots[5] = 0;
                             BoardSpots[6] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 case ConsoleKey.D7:
@@ -182,35 +180,30 @@ namespace Madelinette.Common
                         {
                             BoardSpots[6] = 0;
                             BoardSpots[3] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[4] == 0)
                         {
                             BoardSpots[6] = 0;
                             BoardSpots[4] = Player;
-                            break;
+                            return true;
                         }
                         else if (BoardSpots[5] == 0)
                         {
                             BoardSpots[6] = 0;
                             BoardSpots[5] = Player;
-                            break;
+                            return true;
                         }
                         else
                         {
                             Console.WriteLine("Play is not valid, no empty spots.");
-                            break;
+                            return false;
                         }
                     }
                 default:
                     Console.WriteLine("Invalid input, please try again.");
-                    break;
-
+                    return false;
             }
-
-            if (Player == 1)
-                Player = 2;
-            else Player = 1;
         }
     }
 }
