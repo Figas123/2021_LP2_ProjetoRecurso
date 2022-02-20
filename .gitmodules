@@ -1,8 +1,0 @@
-[submodule "ConsoleMadelinette/Common"]
-	path = ConsoleMadelinette/Common
-	url = https://github.com/Figas123/2021_LP2_ProjetoRecurso.git
-	branch = common
-[submodule "UnityMadelinette/Assets/Scripts/Common"]
-	path = UnityMadelinette/Assets/Scripts/Common
-	url = https://github.com/Figas123/2021_LP2_ProjetoRecurso.git
-	branch = common
